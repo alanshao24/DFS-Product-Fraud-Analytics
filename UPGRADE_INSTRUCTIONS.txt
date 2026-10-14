@@ -1,0 +1,21 @@
+DFS Product & Fraud Analytics: portfolio upgrade
+
+From a Mac Terminal inside ~/Downloads/dfs_product_fraud_sql:
+
+  unzip -o ~/Downloads/DFS_SQL_Portfolio_Upgrade.zip
+  python3 scripts/portfolio_analysis.py
+
+Then open README_PORTFOLIO.md and reports/portfolio_validation.md in VS Code.
+To use the new portfolio-ready README as the repo homepage (after review):
+
+  cp README_PORTFOLIO.md README.md
+
+The upgrade does not overwrite your existing practice/*.sql files or database.
+It adds only: README_PORTFOLIO.md, scripts/portfolio_analysis.py,
+sql/07_fraud_policy_comparison.sql, UPGRADE_INSTRUCTIONS.txt.
+
+To publish to GitHub after reviewing the synthetic-data warning:
+- Check .gitignore excludes generated CSVs and SQLite database.
+- Create a new empty GitHub repo; use git init, git add ., git commit,
+  then connect the remote via GitHub's exact commands.
+- Ensure no real account data, API keys, or credentials are included.
